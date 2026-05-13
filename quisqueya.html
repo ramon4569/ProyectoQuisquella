@@ -1,6 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <style>
+    :root {
+      --verde:        #0a7c3e;
+      --verde-oscuro: #075c2e;
+      --verde-claro:  #e6f4ec;
+      --rojo:         #ce1126;
+      --azul:         #002b7f;
+      --blanco:       #ffffff;
+      --gris-bg:      #f0f7f2;
+      --gris-borde:   #c8e0d2;
+      --texto:        #1a2e22;
+      --texto-suave:  #4a6657;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--gris-bg);
+      color: var(--texto);
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+      color: var(--blanco);
+      padding: 28px 32px;
+      box-shadow: 0 4px 16px rgba(10,124,62,.3);
+    }
+    header h1 { font-size: 28px; margin: 0; }
+    header p  { font-size: 13px; opacity: .85; margin-top: 6px; }
+
+    nav {
+      background: var(--verde-oscuro);
+      padding: 0 32px;
+      border-bottom: 3px solid var(--rojo);
+    }
+    nav a {
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 13px 16px;
+      display: inline-block;
+    }
+    nav a:hover { color: #ffd93d; }
+
+    main { padding: 32px; max-width: 1100px; margin: 0 auto; }
+
+    h2 {
+      font-size: 18px;
+      color: var(--verde-oscuro);
+      margin-bottom: 6px;
+    }
+    .subtitulo {
+      font-size: 13px;
+      color: var(--texto-suave);
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      background: var(--blanco);
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(10,124,62,.1);
+    }
+    th {
+      background: var(--verde);
+      color: var(--blanco);
+      padding: 13px 16px;
+      text-align: left;
+      font-size: 13px;
+    }
+    td { padding: 11px 16px; font-size: 14px; border-bottom: 1px solid var(--gris-borde); }
+    tbody tr:hover { background: var(--verde-claro); }
+    td:last-child { font-weight: 700; color: var(--verde-oscuro); }
+
+    aside {
+      background: var(--blanco);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 28px;
+      border-top: 4px solid var(--verde);
+      box-shadow: 0 2px 12px rgba(10,124,62,.08);
+    }
+    aside h3 { font-size: 15px; color: var(--verde-oscuro); margin-bottom: 14px; }
+
+    .aviso {
+      padding: 10px 12px;
+      border-radius: 7px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .aviso.info   { background: #e8f4fd; border-left: 3px solid #2196f3; }
+    .aviso.alerta { background: #fff4e5; border-left: 3px solid #ff9800; }
+    .aviso.exito  { background: var(--verde-claro); border-left: 3px solid var(--verde); }
+    .aviso.error  { background: #fdecea; border-left: 3px solid var(--rojo); }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--texto-suave);
+      font-size: 13px;
+      border-top: 2px solid var(--gris-borde);
+      margin-top: 30px;
+      background: var(--blanco);
+    }
+  </style>
   <meta charset="UTF-8">
   <title>Quisqueya Payroll</title>
 </head>
